@@ -11,7 +11,7 @@ export const pricedeta: {
   {
     title: "Bitcoin",
     short: "BTC",
-    icon: "public/images/icons/icon-bitcoin.png",
+    icon: "../../public/images/icons/icon-bitcoin.png",
     background: "bg-warning bg-opacity-20",
     mark: "$94,040.99 (-0.9%)",
     width: 18,
