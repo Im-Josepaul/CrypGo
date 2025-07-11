@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+section{
+  @apply bg-darkmode;
+}
+
+.loading{
+  font-family: 'Poppins', sans-serif;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+
+  text-align: center;
+  color: #000000;
+  font-size: 30px;
+}
+
+.loading-body{
+  background: rgb(0 5 16);
+}
+
+.text{
+  color: white;
+  font-family: '__DM_Sans_989755', '__DM_Sans_Fallback_989755';
+  font-weight: 600;
+}
+
+.qr-img{
+  width: 200px;
+  height: 200px;
+  margin-top: 10%;
+  margin-bottom: 75px;
+  border-color: rgb(153 227 158 / var(--tw-text-opacity));
+  color: rgb(153 227 158 / var(--tw-text-opacity));
+  margin-left: 20%;
+}
+
+.pay-btn{
+  margin-top: 10px;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-hide {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+.toastContainer{
+  position: "top-right";
+}
+
+@media only screen and (max-width: 500px) {
+  .toastContainer{
+    position: "top";
+    margin-top: 20%;
+  }
+}
