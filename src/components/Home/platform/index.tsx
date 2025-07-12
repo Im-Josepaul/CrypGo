@@ -26,7 +26,7 @@ const Platform = () => {
             </div>
           </div>
         </div>
-        <div className="bg-gradient-to-br from-tealGreen to-charcoalGray sm:w-50 w-96 sm:h-50 h-96 rounded-full sm:-bottom-80 bottom-0 blur-400 z-0 absolute sm:-left-48 opacity-60"></div>
+        <div className="bg-gradient-to-br from-tealGreen to-charcoalGray sm:w-50 w-96 rounded-full sm:-bottom-80 bottom-0 blur-400 z-0 absolute sm:-left-48 opacity-60"></div>
       </div>
     </section>
   );
