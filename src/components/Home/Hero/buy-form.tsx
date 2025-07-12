@@ -170,31 +170,35 @@ const BuyCrypto = () => {
       toast.error("Please enter a valid amount");
 
     }else{
-      console.log(amount + " " + nameCrypto);
       const cost:number = Number(Number(totalCost) + Number(totalCost)*10/100);
       const message:string = `Need ${amount} quantity of ${nameCrypto} token`;
       const upiURL:string = `upi://pay?pa=${upiId}&pn=${encodeURIComponent(nameOfReciever)}&am=${cost}&cu=INR&tn=${encodeURIComponent(message)}`;
-      console.log(upiURL);
       setNextPageData((prevData) => ({
         ...prevData,
         upiURL: upiURL,
         amount: cost,
         note: message
       }));
+      document.getElementById("header")?.classList.replace("z-50", "z-51");
       setNextPage(true);
     }
   }
 
+    const navbarChanger = () => {
+    document.getElementById("header")?.classList.replace("z-51", "z-50");
+    setNextPage(false);
+    }
+
 
   return (
-    <div className="max-w-md mx-auto p-4">
+    <div className="max-w-md mx-auto">
       <div className="flex justify-center mb-16">
         <Logo />
       </div>
       {nextPage ? (
         <form>
             <button
-            onClick={() => setNextPage(false)}
+            onClick={() => navbarChanger()}
             className="absolute top-0 left-8 mr-8 mt-8 dark:invert"
             aria-label="Close Buy Modal"
           >
@@ -214,15 +218,16 @@ const BuyCrypto = () => {
                 className="text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 w-full focus:border-primary focus-visible:outline-0"
                 required
               />
-              <div className="bg-green-300 p-1 rounded-lg border border-green-300 qr-img">
+              <div className="bg-green-300 p-1 rounded-lg border border-green-300 qr-img ">
                 <img ref={qrImgRef} id="qrImg" src="/images/Default QR Code.png"></img>
-                <button className="text-darkmode font-medium text-18 bg-primary px-2 border border-primary rounded-lg py-3 hover:text-primary hover:bg-transparent pay-btn">
-                  Click to Pay
-                </button>
-              </div>
-              
+                <a href={`${nextPageData.upiURL}`}>
+                  <button className="text-darkmode font-medium text-18 bg-primary px-2 border border-primary rounded-lg py-3 hover:text-primary hover:bg-transparent pay-btn">
+                    Click to Pay
+                  </button>
+                </a>
+              </div> 
               <div className="mb-4">
-                <p className="flex justify-between text-white">Upload the screenshot of the transaction:</p>
+                <p className="text-left text-white">Upload the screenshot of the transaction:</p>
                 <div className="flex items-center gap-3">
                   <p className="text-white text-m">File:</p>
                   <label className="cursor-pointer bg-transparent text-white border border-green-500 px-3 py-1 rounded-md text-m">

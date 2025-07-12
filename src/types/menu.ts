@@ -3,7 +3,7 @@ export type SubmenuItem = {
     href: string;
   };    
   
-  export type HeaderItem = {
+export type HeaderItem = {
     label: string;
     href: string;
     submenu?: SubmenuItem[];

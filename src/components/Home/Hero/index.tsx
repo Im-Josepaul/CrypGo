@@ -5,7 +5,6 @@ import BuyCrypto from "../../../components/Home/Hero/buy-form";
 import CardSlider from "../../../components/Home/Hero/slider";
 import { useEffect, useRef, useState, useCallback } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
-import { getImagePrefix } from "../../../utils/utils";
 
 const Hero = () => {
   const [isBuying, setIsBuyingOpen] = useState(false);
@@ -19,6 +18,11 @@ const Hero = () => {
     },
     [BuyRef]
   );
+
+  const navbarChanger = () => {
+    document.getElementById("header")?.classList.replace("z-51", "z-50");
+    setIsBuyingOpen(false);
+  }
 
   
   useEffect(() => {
@@ -56,7 +60,7 @@ const Hero = () => {
           <motion.div {...leftAnimation} className="lg:col-span-5 col-span-12">
             <div className="flex gap-6 items-center lg:justify-start justify-center mb-5 mt-24">
               <Image
-                src= {`${getImagePrefix()}images/icons/icon-bag.svg`}
+                src= {"../../../../images/icons/icon-bag.svg"}
                 alt="icon"
                 width={40}
                 height={40}
@@ -84,7 +88,7 @@ const Hero = () => {
           >
             <div className="ml-20 -mr-64">
               <Image
-                src= {`${getImagePrefix()}images/hero/banner-image.png`}
+                src= {`../../../../images/hero/banner-image.png`}
                 alt="Banner"
                 width={1150}
                 height={1150}
@@ -101,10 +105,10 @@ const Hero = () => {
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div
             ref={BuyRef}
-            className="relative w-full max-w-md overflow-hidden rounded-lg px-8 pt-14 pb-8 z-999 text-center bg-dark_grey bg-opacity-90 backdrop-blur-md"
+            className="relative w-full max-w-md overflow-hidden rounded-lg px-5 pt-14 pb-7 z-999 text-center bg-dark_grey bg-opacity-90 backdrop-blur-md"
           >
             <button
-              onClick={() => setIsBuyingOpen(false)}
+              onClick={() => navbarChanger()}
               className="absolute top-0 right-0 mr-8 mt-8 dark:invert"
               aria-label="Close Buy Modal"
             >

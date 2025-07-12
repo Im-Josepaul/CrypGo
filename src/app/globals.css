@@ -40,7 +40,10 @@ section{
   margin-bottom: 75px;
   border-color: rgb(153 227 158 / var(--tw-text-opacity));
   color: rgb(153 227 158 / var(--tw-text-opacity));
-  margin-left: 20%;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 
 .pay-btn{
@@ -58,11 +61,17 @@ section{
 
 .toastContainer{
   position: "top-right";
+  margin-top: 20%;
 }
 
 @media only screen and (max-width: 500px) {
   .toastContainer{
     position: "top";
-    margin-top: 20%;
+    margin-top: 5% !important;
+  }
+
+  .timeline-image{
+    width: 300px;
+    height: auto;
   }
 }

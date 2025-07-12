@@ -17,37 +17,40 @@ const CardSlider = () => {
     slidesToScroll: 1,
     cssEase: "ease-in-out",
     responsive: [
-      {
-        breakpoint: 479,
-        settings: {
-          slidesToShow: 1,
-        },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-        },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
       },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 4,
-        },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
       },
-    ],
+    },
+  ],
   };
   let priceData: any = sessionStorage.getItem('cachedPriceData');
   priceData = JSON.parse(priceData);
   return (
-    <div className="lg:-mt-16 mt-16">
+    <div className="lg:-mt-16 mt-16 w-full overflow-hidden">
       <Slider {...settings}>
         {pricedeta.map((item, index) => (
           <div key={index} className="pr-6">
             <div className="px-5 py-6 bg-dark_grey bg-opacity-80 rounded-xl">
               <div className="flex items-center gap-5">
                 <div
-                  className={`${item.background} ${item.padding} rounded-full`}
+                  className={`${item.background} ${item.padding} rounded-full px-2 max-w-full`}
                 >
                   <Image
                     src= {`${getImagePrefix()}${item.icon}`}

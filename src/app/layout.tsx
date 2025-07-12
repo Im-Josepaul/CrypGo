@@ -108,7 +108,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/vnd.icon" href="/images/favicon.ico"></link>
       </head>
-      <body className={`${font.className}`}>
+      <body className={`${font.className} overflow-x-hidden max-w-screen w-full`}> 
         <ThemeProvider
           attribute="class"
           enableSystem={true}

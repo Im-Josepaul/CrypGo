@@ -63,12 +63,12 @@ const Header: React.FC = () => {
   }, [isSignInOpen, isSignUpOpen, navbarOpen]);
 
   return (
-    <header
-      className={`fixed top-0 z-40 w-full pb-5 transition-all duration-300 ${
+    <header id="header"
+      className={`max-w-screen overflow-x-hidden fixed top-0 z-50 w-full pb-5 transition-all duration-300 ${
         sticky ? " shadow-lg bg-darkmode pt-5" : "shadow-none md:pt-14 pt-5"
       }`}
     >
-      <div className="lg:py-0 py-2">
+      <div className="lg:py-0 py-2 max-w-screen overflow-x-hidden w-full">
         <div className="container mx-auto lg:max-w-screen-xl md:max-w-screen-md flex items-center justify-between px-4">
           <Logo />
           <nav className="hidden lg:flex flex-grow items-center gap-8 justify-center">
