@@ -220,10 +220,11 @@ const BuyCrypto = () => {
               />
               <div className="bg-green-300 p-1 rounded-lg border border-green-300 qr-img ">
                 <img ref={qrImgRef} id="qrImg" src="/images/Default QR Code.png"></img>
-                <a href={`${nextPageData.upiURL}`}>
-                  <button className="text-darkmode font-medium text-18 bg-primary px-2 border border-primary rounded-lg py-3 hover:text-primary hover:bg-transparent pay-btn">
-                    Click to Pay
-                  </button>
+                <a
+                  href={nextPageData.upiURL}
+                  className="text-darkmode font-medium text-18 bg-primary px-2 border border-primary rounded-lg py-3 hover:text-primary hover:bg-transparent pay-btn block text-center mt-2"
+                >
+                  Click to Pay
                 </a>
               </div> 
               <div className="mb-4">
