@@ -281,9 +281,10 @@ const BuyCrypto = () => {
           <div className="mb-4 relative">
             <div
               onClick={() => setIsDropdownOpen((prev) => !prev)}
-              className="cursor-pointer text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 text-start"
+              className="flex items-center cursor-pointer text-white bg-transparent border border-dark_border border-opacity-60 rounded-md px-3 py-2 text-start"
             >
               {formData.name}
+              <span className="text-muted text-lg ml-auto">▼</span>
             </div>
             {isDropdownOpen && (
               <div className="absolute z-10 bg-dark border border-dark_border border-opacity-60 mt-1 rounded-md w-full max-h-60 overflow-y-auto scroll-hide">
