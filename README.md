@@ -1,17 +1,17 @@
-# 🚀 CrypGo — Crypto on the Go
+# 🪙 CrypGo — Crypto on the Go
 
 **One-of-a-kind P2P crypto exchange platform with UPI payments.**
 
 ---
 
-## 🌐 What is CrypGo?
+## 💱 What is CrypGo?
 CrypGo is a simple, fast, and peer-to-peer crypto exchange web app designed for users to buy crypto using UPI. It is especially useful in India, where UPI is widely adopted. Users can choose their desired cryptocurrency, set a budget, enter their wallet address, and pay through a dynamic UPI QR code. After payment, the crypto is sent to the provided wallet within 48 hours.
 
 Currently, CrypGo operates with a single peer who handles all transactions, and the transaction details are sent through email to the peer. In the future, the platform is built to scale with more peers and automated processing.
 
 ---
 
-## 👨‍💻 How It Works
+## 🧾 How It Works
 1. Choose your crypto and budget
 2. Enter your wallet address
 3. Either scan the UPI QR code or clich the button to pay
@@ -20,7 +20,7 @@ Currently, CrypGo operates with a single peer who handles all transactions, and 
 
 ---
 
-## 🛠️ Tech Stack
+## 👨‍💻 Tech Stack
 - **Frontend:** React, Tailwind CSS
 - **Backend:** Next.js, TypeScript
 - **APIs & Libraries:**
