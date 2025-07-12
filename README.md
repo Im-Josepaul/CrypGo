@@ -1,6 +1,7 @@
 # 🪙 CrypGo — Crypto on the Go
 
 **One-of-a-kind P2P crypto exchange platform with UPI payments.**
+<img width="1029" height="671" alt="image" src="https://github.com/user-attachments/assets/dfa4f326-e2e9-43b2-a7d1-bcdce2f6645a" />
 
 ---
 
