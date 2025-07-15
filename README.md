@@ -48,7 +48,7 @@ Template design provided by [ThemeWagon](https://themewagon.com/themes/crypgo/).
 ---
 
 ## 🎥 Product Explaination Video
-Click here 👉 https://youtu.be/1hCU0a-tKLQ
+Click here 👉 https://youtu.be/h2DnP48wOYs?si=aqIApBbVANnWSyOo
 
 ---
 
